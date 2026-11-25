@@ -1,0 +1,4 @@
+split,years,rows,positives,negatives,base_rate,method,target
+train,<=2020,13176,6984,6192,0.5300546448087432,Calendar-year chronological,at least one non-low-confidence VIIRS detection in cell on next day
+validation,2021,3294,1805,1489,0.5479659987856709,Calendar-year chronological,at least one non-low-confidence VIIRS detection in cell on next day
+test,2022-2023,6588,3264,3324,0.49544626593806923,Calendar-year chronological,at least one non-low-confidence VIIRS detection in cell on next day

@@ -1,0 +1,49 @@
+dataset,model,metric,mean,std,folds,positive_support_per_fold,timestamp_type
+predictive_irrigation,logistic_regression,accuracy,0.9725000000000001,0.03440339736130723,5,4;4;6;4;4,source timestamp
+predictive_irrigation,logistic_regression,precision_macro,0.8182437275985663,0.14692348239811326,5,4;4;6;4;4,source timestamp
+predictive_irrigation,logistic_regression,recall_macro,0.9698717948717949,0.03404081550603013,5,4;4;6;4;4,source timestamp
+predictive_irrigation,logistic_regression,f1_macro,0.8555412656582483,0.120956029586547,5,4;4;6;4;4,source timestamp
+predictive_irrigation,logistic_regression,pr_auc,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,logistic_regression,roc_auc,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,accuracy,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,precision_macro,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,recall_macro,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,f1_macro,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,pr_auc,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,random_forest,roc_auc,1.0,0.0,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,accuracy,0.99875,0.002795084971874727,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,precision_macro,0.9800000000000001,0.04472135954999578,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,recall_macro,0.9993589743589745,0.0014333769086537062,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,f1_macro,0.9885673454805287,0.025564192668807894,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,pr_auc,0.9525,0.10621322893124004,5,4;4;6;4;4,source timestamp
+predictive_irrigation,gradient_boosting,roc_auc,0.9991987179487178,0.0017917211358171327,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,accuracy,0.9962500000000001,0.008385254915624231,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,precision_macro,0.9980891719745223,0.004272741358279852,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,recall_macro,0.95,0.11180339887498948,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,f1_macro,0.9657020364415864,0.07669257800642366,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,pr_auc,0.966031746031746,0.0759553249499929,5,4;4;6;4;4,source timestamp
+predictive_irrigation,xgboost,roc_auc,0.9982683982683984,0.0038719791818178357,5,4;4;6;4;4,source timestamp
+motor_monitor,logistic_regression,accuracy,0.9931999999999999,0.007694153624668545,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,logistic_regression,precision_macro,0.9930764102061698,0.007806310200721923,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,logistic_regression,recall_macro,0.9934902428881823,0.007369169029761256,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,logistic_regression,f1_macro,0.993190722763339,0.007704149374547505,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,logistic_regression,pr_auc,0.9999760550909726,4.612878984677371e-05,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,logistic_regression,roc_auc,0.9999743675590826,4.882869550977942e-05,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,accuracy,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,precision_macro,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,recall_macro,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,f1_macro,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,pr_auc,1.0,5.551115123125783e-17,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,random_forest,roc_auc,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,accuracy,0.9992000000000001,0.0017888543819998331,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,precision_macro,0.9991489361702127,0.0019030365765955683,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,recall_macro,0.9992509363295881,0.0016749572865167003,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,f1_macro,0.9991967097230254,0.0017962116649795662,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,pr_auc,1.0,9.614813431917819e-17,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,gradient_boosting,roc_auc,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,accuracy,0.9996,0.0008944271909999167,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,precision_macro,0.9996078431372549,0.0008768894029410909,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,recall_macro,0.9995934959349594,0.0009089707225608578,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,f1_macro,0.999599870357996,0.0008947170793336466,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,pr_auc,1.0,1.1102230246251565e-16,5,257;267;246;258;269,synthetic playback timestamp
+motor_monitor,xgboost,roc_auc,1.0,0.0,5,257;267;246;258;269,synthetic playback timestamp

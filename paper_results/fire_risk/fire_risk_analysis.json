@@ -1,0 +1,190 @@
+{
+  "dataset_setup": [
+    {
+      "dataset": "NASA FIRMS VIIRS_SNPP active-fire hotspots",
+      "source": "https://firms.modaps.eosdis.nasa.gov/",
+      "bbox": "74.0E,28.4N to 77.6E,32.6N",
+      "temporal_range": "2017-10-01 to 2023-12-04",
+      "spatial_resolution": "Point detections / 0.5\u00b0 x 0.625\u00b0 grid labels",
+      "temporal_resolution": "5-day API windows; daily detections",
+      "records": 445482,
+      "cache_files": 91,
+      "unique_dates": 455,
+      "missing_value_percent": 0.0,
+      "target": "None; hotspot observations",
+      "limitations": "Satellite-detected thermal anomalies, not confirmed agricultural fires"
+    },
+    {
+      "dataset": "NASA POWER daily meteorology",
+      "source": "https://power.larc.nasa.gov/",
+      "bbox": "74.0E,28.4N to 77.6E,32.6N",
+      "temporal_range": "2017-01-01 to 2023-12-31",
+      "spatial_resolution": "54 grid-point locations at 0.5\u00b0 x 0.625\u00b0",
+      "temporal_resolution": "Daily",
+      "records": 138024,
+      "cache_files": 54,
+      "unique_dates": 2556,
+      "missing_value_percent": 0.0,
+      "target": "None",
+      "limitations": "Point meteorology used as observed-weather proxy, not forecast"
+    },
+    {
+      "dataset": "Reconstructed cell-day fire-risk dataset",
+      "source": "FIRMS detections joined to NASA POWER",
+      "bbox": "74.0E,28.4N to 77.6E,32.6N",
+      "temporal_range": "2017-10-01 to 2023-11-30",
+      "spatial_resolution": "54 grid cells",
+      "temporal_resolution": "Daily, October-November labels",
+      "records": 23058,
+      "cache_files": "91 FIRMS + 54 POWER",
+      "unique_dates": 427,
+      "missing_value_percent": 0.0,
+      "target": "VIIRS detection on next day",
+      "limitations": "Regional detection-risk label; no confirmed fire/crop mask"
+    }
+  ],
+  "evaluation": {
+    "rows": {
+      "train": 13176,
+      "val": 3294,
+      "test": 6588
+    },
+    "positives": {
+      "train": 6984,
+      "val": 1805,
+      "test": 3264
+    },
+    "base_rate_test": 0.49544626593806923,
+    "features": [
+      "T2M",
+      "RH2M",
+      "WS2M",
+      "PRECTOTCORR",
+      "rain3",
+      "dry_days",
+      "det_today",
+      "det_prev3",
+      "det_prev7",
+      "doy",
+      "lat",
+      "lon"
+    ],
+    "seed": 0,
+    "split_mode": "year-based"
+  },
+  "existing_reference_models": {
+    "persistence (fire yesterday)": {
+      "AUPRC": 0.7408789489250701,
+      "AUPRC_CI95_block_bootstrap": [
+        0.6900751340771861,
+        0.7816766655809092
+      ],
+      "precision": 0.8020257826887661,
+      "recall": 0.8005514705882353,
+      "missed_event_rate": 0.19944852941176472,
+      "false_alarms_per_100_negative_cell_days": 19.404332129963898,
+      "alert_share_pct": 49.45355191256831,
+      "brier": null
+    },
+    "climatology (day-of-season rate)": {
+      "AUPRC": 0.5452011131932044,
+      "AUPRC_CI95_block_bootstrap": [
+        0.5005639223954226,
+        0.5776173890753864
+      ],
+      "precision": 0.5102442868400315,
+      "recall": 0.7935049019607843,
+      "missed_event_rate": 0.20649509803921567,
+      "false_alarms_per_100_negative_cell_days": 74.78941034897714,
+      "alert_share_pct": 77.04918032786885,
+      "brier": 0.25001264926128314
+    },
+    "weather index (hot, dry, windy)": {
+      "AUPRC": 0.4369277933031093,
+      "AUPRC_CI95_block_bootstrap": [
+        0.3888202556983531,
+        0.4790767414089348
+      ],
+      "precision": 0.5015865267268733,
+      "recall": 0.6295955882352942,
+      "missed_event_rate": 0.3704044117647059,
+      "false_alarms_per_100_negative_cell_days": 61.43200962695548,
+      "alert_share_pct": 62.18882817243473,
+      "brier": null
+    },
+    "logistic regression": {
+      "AUPRC": 0.8530347910413624,
+      "AUPRC_CI95_block_bootstrap": [
+        0.7972197200396551,
+        0.8935749043934041
+      ],
+      "precision": 0.8503907703758838,
+      "recall": 0.7000612745098039,
+      "missed_event_rate": 0.29993872549019607,
+      "false_alarms_per_100_negative_cell_days": 12.093862815884476,
+      "alert_share_pct": 40.78627808136005,
+      "brier": 0.134564506034711
+    },
+    "gradient-boosted trees": {
+      "AUPRC": 0.872330398328095,
+      "AUPRC_CI95_block_bootstrap": [
+        0.8013490093404004,
+        0.9130831480002444
+      ],
+      "precision": 0.8367775831873906,
+      "recall": 0.7319240196078431,
+      "missed_event_rate": 0.26807598039215685,
+      "false_alarms_per_100_negative_cell_days": 14.019253910950662,
+      "alert_share_pct": 43.336369156041286,
+      "brier": 0.12848954144042787
+    }
+  },
+  "added_0_5_threshold_models": {
+    "logistic regression (0.5 threshold)": {
+      "AUPRC": 0.8530347910413624,
+      "ROC_AUC": 0.8852484567081949,
+      "precision": 0.7938203869477332,
+      "recall": 0.8422181372549019,
+      "f1": 0.8173034041920618,
+      "brier": 0.134564506034711,
+      "threshold": 0.5
+    },
+    "histogram gradient boosting (0.5 threshold)": {
+      "AUPRC": 0.872330398328095,
+      "ROC_AUC": 0.8951976840299899,
+      "precision": 0.7857941834451901,
+      "recall": 0.8609068627450981,
+      "f1": 0.8216374269005848,
+      "brier": 0.12848954144042787,
+      "threshold": 0.5
+    },
+    "random forest (0.5 threshold)": {
+      "AUPRC": 0.8841591839968393,
+      "ROC_AUC": 0.8991576229619405,
+      "precision": 0.7899041173152849,
+      "recall": 0.8581495098039216,
+      "f1": 0.8226138032305433,
+      "brier": 0.12702627083897122,
+      "threshold": 0.5
+    },
+    "xgboost (0.5 threshold)": {
+      "AUPRC": 0.8756622035006029,
+      "ROC_AUC": 0.8961644534844624,
+      "precision": 0.7867977528089888,
+      "recall": 0.8581495098039216,
+      "f1": 0.820926143024619,
+      "brier": 0.12772491574287415,
+      "threshold": 0.5
+    }
+  },
+  "auditable_source": "outputs/results_c/cache",
+  "target": "At least one non-low-confidence VIIRS detection in grid cell on day t+1",
+  "limitations": [
+    "Regional 0.5\u00b0 \u00d7 0.625\u00b0 grid cells, not field-level risk",
+    "Observed weather is optimistic; not forecast weather",
+    "Hotspots are satellite-detected anomalies, not confirmed agricultural fires",
+    "No cropland mask",
+    "Spatially adjacent grid cells remain in same calendar-year splits",
+    "No independent spatial holdout"
+  ]
+}

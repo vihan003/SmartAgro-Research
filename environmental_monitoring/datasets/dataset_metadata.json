@@ -1,0 +1,93 @@
+{
+  "predictive_irrigation": {
+    "dataset_name": "Environmental Sensor Dataset for LSTM-Based Predictive Irrigation",
+    "dataset_id": "predictive_irrigation_jtsyb593fy",
+    "source_url": "https://data.mendeley.com/datasets/jtsyb593fy/1",
+    "license": "CC BY 4.0",
+    "doi": "10.17632/jtsyb593fy.1",
+    "download_date": "2026-11-20T06:38:21.571314+00:00",
+    "raw_source_file": "data\\environmental\\extracted\\predictive_irrigation\\Environmental Sensor Dataset for LSTM-Based Predic\\Edge_IoT_Predictive_Irrigation_Dataset.xlsx",
+    "rows": 960,
+    "columns": 14,
+    "features": [
+      "temperature_c",
+      "humidity_pct",
+      "soil_moisture_pct",
+      "light_intensity",
+      "hour",
+      "day_of_week",
+      "moisture_change_1",
+      "moisture_change_3",
+      "temperature_rolling_3",
+      "humidity_rolling_3"
+    ],
+    "target": "pump_status",
+    "timestamp_column": "timestamp",
+    "missing_value_percent": 0.0,
+    "pump_status_counts": {
+      "0": 932,
+      "1": 28
+    },
+    "limitations": [
+      "20-day smart-garden testbed, 30-minute interval",
+      "Not field-validated across crops or soils",
+      "Pump status is the only explicit outcome label"
+    ]
+  },
+  "motor_monitor": {
+    "dataset_name": "Soil Moisture, Air Temperature, Humidity and Motor on/off Monitoring data",
+    "dataset_id": "motor_monitor_fpdwmm7nrb",
+    "source_url": "https://data.mendeley.com/datasets/fpdwmm7nrb/1",
+    "license": "CC BY NC 3.0",
+    "doi": "10.17632/fpdwmm7nrb.1",
+    "download_date": "2026-11-20T06:38:21.653309+00:00",
+    "raw_source_file": "data\\environmental\\extracted\\motor_monitor\\Soil Moisture, Air temperature, humidity, and Motor onoff Monitoring data\\Soil Moisture, Air Temperature and humidity, and Water Motor onoff Monitor data.AmritpalKaur.csv",
+    "rows": 3000,
+    "columns": 6,
+    "features": [
+      "soil_moisture_pct",
+      "temperature_c",
+      "humidity_pct"
+    ],
+    "target": "pump_status",
+    "timestamp_column": "timestamp",
+    "missing_value_percent": 0.0,
+    "pump_status_counts": {
+      "0": 1431,
+      "1": 1569
+    },
+    "limitations": [
+      "No original timestamps in the source CSV",
+      "Synthetic timestamps are playback-only chronology",
+      "No crop or soil-class identity",
+      "CC BY-NC limits commercial use"
+    ]
+  },
+  "smartagro_iot": {
+    "dataset_name": "Smart Agriculture and Plant Health Monitoring using IoT",
+    "dataset_id": "smartagro_iot_65jxyrxv7b",
+    "source_url": "https://data.mendeley.com/datasets/65jxyrxv7b/1",
+    "license": "CC BY 4.0",
+    "doi": "10.17632/65jxyrxv7b.1",
+    "download_date": "2026-11-20T06:38:21.833491+00:00",
+    "raw_source_file": "data\\environmental\\extracted\\smartagro_iot",
+    "rows": 101,
+    "columns": 7,
+    "features": [
+      "temperature_c",
+      "humidity_pct",
+      "light_lux",
+      "soil_moisture_pct",
+      "soil_ph",
+      "soil_temperature_c"
+    ],
+    "target": null,
+    "timestamp_column": "timestamp",
+    "missing_value_percent": 0.0,
+    "limitations": [
+      "Sensor files contain 100 data readings and are joined by timestamp",
+      "No pump or validated stress label",
+      "Historical sensor archive, not live field sensing"
+    ]
+  }
+}

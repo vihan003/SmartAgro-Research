@@ -1,0 +1,8 @@
+dataset_key,category,count
+motor_monitor,High stress,559
+motor_monitor,Low stress,2441
+predictive_irrigation,Low stress,162
+predictive_irrigation,Moderate stress,1
+predictive_irrigation,Normal,797
+smartagro_iot,High stress,4
+smartagro_iot,Low stress,97

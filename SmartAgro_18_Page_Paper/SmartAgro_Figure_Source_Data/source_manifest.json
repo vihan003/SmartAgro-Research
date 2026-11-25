@@ -1,0 +1,58 @@
+{
+  "purpose": "Source data and file hashes for figures in the manuscript",
+  "project_root": "Parent project folder; no API keys are used or included",
+  "source_files": [
+    {
+      "path": "outputs/results_a/per_class_grouped__mobilenetv2.csv",
+      "sha256": "0e887ac7bfaeebc4388abe30eb6d8c50130f60c4c46e7716317bf7e4e013f33a"
+    },
+    {
+      "path": "outputs/results_a/per_class_grouped__small_cnn.csv",
+      "sha256": "3b6abd6da77ae64c63a8f1880fd472a06e763901375949d25976111dec2ada89"
+    },
+    {
+      "path": "data/environmental/processed/smartagro_iot.csv",
+      "sha256": "171c62a485ae8b00b6a9e01042d0c3072bef1291d50b21d0f5794085c25dc8fe"
+    },
+    {
+      "path": "paper_results/environmental_monitoring/dataset_summary.csv",
+      "sha256": "f97d95fabfd512339b0d553c44e688cc658acae291145adeb71ad6efd5f83496"
+    },
+    {
+      "path": "paper_results/environmental_monitoring/sensor_statistics.csv",
+      "sha256": "1f09a524d8b8242ed20d0b59b6cddfeb07f8157cb61d938f94151982984ca270"
+    },
+    {
+      "path": "paper_results/environmental_monitoring/evaluation_summary.csv",
+      "sha256": "dd49132003bbac954503823a2dba081ed2cc5a5d0c04a141a9ba6a93507f0938"
+    },
+    {
+      "path": "paper_results/environmental_monitoring/stress_category_summary.csv",
+      "sha256": "f27d212ee1f722b27f25c456d6806fbcae6f63e9e75de361b7616576db92251d"
+    },
+    {
+      "path": "paper_results/environmental_monitoring/temporal_cv_summary.csv",
+      "sha256": "c30377db0752d38c24fee045ad7c808267b31d1d8a3b3eef97c8b0697542a5f0"
+    },
+    {
+      "path": "paper_results/fire_risk/model_comparison.csv",
+      "sha256": "9d1c6c44d8cfc375f6c1ef3c1d66b240b374d25d4c4c1498bfd1018ee05a671f"
+    },
+    {
+      "path": "paper_results/fire_risk/evaluation_details.csv",
+      "sha256": "be25f574f5e2382fa37026ec0c3a12600525922c2b5f533b11060f11d7f0d007"
+    },
+    {
+      "path": "paper_results/fire_risk/dataset_summary.csv",
+      "sha256": "9a2a03bfb0f7feea82f07c136219dd7c00c924f5fbb8e3bf370e7332f9f1810f"
+    }
+  ],
+  "derived_files": [
+    "fire_primary_results.csv: results_c.json primary models and operating metrics",
+    "fire_auxiliary_results.csv: fixed 0.5-threshold comparison table",
+    "fire_oct_nov_counts.csv: monthly counts from cached FIRMS detections, October-November only",
+    "fire_grid_cell_rates.csv: next-day label rates reconstructed from FIRMS/POWER cache",
+    "fire_gbt_pr_curve.csv: deterministic seed-0 replay; AP checked against results_c.json"
+  ],
+  "figure_builder": "recreate_figures.py; uses only CSVs in this directory"
+}

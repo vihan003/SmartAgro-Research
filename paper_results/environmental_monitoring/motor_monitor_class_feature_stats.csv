@@ -1,0 +1,5 @@
+,soil_moisture_pct,soil_moisture_pct,soil_moisture_pct,soil_moisture_pct,temperature_c,temperature_c,temperature_c,temperature_c,humidity_pct,humidity_pct,humidity_pct,humidity_pct
+,count,min,mean,max,count,min,mean,max,count,min,mean,max
+pump_status,,,,,,,,,,,,
+0,1431,395.4654845,830.5621813723271,984.82801,1431,18.00888645,28.412406554360587,38.98266297,1431,38.0195423,59.37157975242488,81.25275284
+1,1569,314.5110162,509.06614466749517,681.6934133,1569,18.00213247,28.470985261510517,38.99276957,1569,38.00020142,59.4014640012492,81.26740715

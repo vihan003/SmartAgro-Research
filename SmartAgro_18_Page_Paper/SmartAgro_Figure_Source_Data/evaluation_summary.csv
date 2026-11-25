@@ -1,0 +1,9 @@
+dataset,model,train_rows,validation_rows,test_rows,train_class_0,train_class_1,validation_class_0,validation_class_1,test_class_0,test_class_1,accuracy,precision_macro,recall_macro,f1_macro,f1_weighted,roc_auc,pr_auc,positive_precision,positive_recall,tn,fp,fn,tp,evaluation_reliability
+predictive_irrigation,logistic_regression,672,144,144,652,20,138,6,142,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,142,0,0,2,Insufficient positive test cases (2 pump-on)
+predictive_irrigation,random_forest,672,144,144,652,20,138,6,142,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,142,0,0,2,Insufficient positive test cases (2 pump-on)
+predictive_irrigation,gradient_boosting,672,144,144,652,20,138,6,142,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,142,0,0,2,Insufficient positive test cases (2 pump-on)
+predictive_irrigation,xgboost,672,144,144,652,20,138,6,142,2,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,142,0,0,2,Insufficient positive test cases (2 pump-on)
+motor_monitor,logistic_regression,2100,450,450,1008,1092,215,235,208,242,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,208,0,0,242,Exploratory; source timestamps synthetic and label validity unverified
+motor_monitor,random_forest,2100,450,450,1008,1092,215,235,208,242,1.0,1.0,1.0,1.0,1.0,1.0,0.9999999999999999,1.0,1.0,208,0,0,242,Exploratory; source timestamps synthetic and label validity unverified
+motor_monitor,gradient_boosting,2100,450,450,1008,1092,215,235,208,242,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,208,0,0,242,Exploratory; source timestamps synthetic and label validity unverified
+motor_monitor,xgboost,2100,450,450,1008,1092,215,235,208,242,1.0,1.0,1.0,1.0,1.0,0.9999999999999999,0.9999999999999999,1.0,1.0,208,0,0,242,Exploratory; source timestamps synthetic and label validity unverified
